@@ -29,12 +29,7 @@
 			<button class="btn btn-active btn-sekunder-color-2">
 				<div class="fa fa-lg fa-shopping-cart"></div>
 			</button>
-			<!--<ul>
-						    <li>
-						    	<div class="bot-right bot-right-color fa fa-lg fa-shopping-cart"></div>
-						    </li>
-			</ul>
-					-->
+			<!--<ul><li><div class="bot-right bot-right-color fa fa-lg fa-shopping-cart"></div></li></ul>-->
 		</div>
 	</div>
 </div>
