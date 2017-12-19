@@ -15,7 +15,7 @@ class CreateCostumerShippingAddressesTable extends Migration
     {
         Schema::create('costumer_shipping_addresses', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('email', 35);
+            $table->string('costumer_email', 35)->index();
             $table->string('address', 50);
             $table->string('kecamatan', 20);
             $table->string('kotamadya', 20);

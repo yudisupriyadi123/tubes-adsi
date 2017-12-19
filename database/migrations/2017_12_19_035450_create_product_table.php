@@ -20,7 +20,7 @@ class CreateProductTable extends Migration
             $table->tinyInteger('discount_in_percent');
             $table->string('description', 5000);
             $table->smallInteger('stock');
-            $table->integer('category_id')->index();
+            $table->integer('category_id')->unsigned()->nullable()->index();
         });
     }
 

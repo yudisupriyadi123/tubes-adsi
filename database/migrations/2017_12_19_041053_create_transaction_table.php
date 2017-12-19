@@ -16,8 +16,7 @@ class CreateTransactionTable extends Migration
         Schema::create('transaction', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps('payment_has_verified_at');
-            $table->integer('product_id')->index();
-            $table->string('email', 35)->index();
+            $table->string('costumer_email', 35)->nullable()->index();
         });
     }
 
