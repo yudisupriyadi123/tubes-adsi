@@ -1,25 +1,21 @@
 .content-post {
 	position: relative;
-	width: 100%;
-	height: 500px;
+	width: 95%;
 	margin-top: 15px;
-	border: 1px #ededed solid;
 }
 .content-post .main-post {
 	position: relative;
-	width: 60%;
-	height: 100%;
+	width: 100%;
+	height: 500px;
 	background-color: #000;
-	float: left;
 	background-size: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 .content-post .side-post {
 	position: relative;
-	width: 40%;
+	width: 100%;
 	height: 100%;
-	float: right;
 	color: #555;
 }
 .content-post .side-post .notif-panel {
@@ -39,8 +35,7 @@
 
 .comment-content {
 	margin-top: 15px;
-	height: 800px;
-	overflow-y: auto;
+	overflow-x: auto;
 }
 #ctn-ulasan .txt {
 	width: 89%;
@@ -102,21 +97,22 @@
 
 /*start other picture*/
 .other-picts {
-	position: relative;
-	width: 100%;
-	height: 500px;
-	overflow-y: auto;
+	height: 200px;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+.other-picts .view-picts {
 }
 .other-picts .view-picts {
 	position: relative;
-	width: 50%;
-	padding-bottom: 50%;
+	width: 200px;
+	padding-bottom: 180px;
+	display: inline-block;
 	background-size: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: #000;
 	cursor: pointer;
-	float: left;
 }
 .other-picts .view-picts:hover {
 	background-size: 110%;
@@ -128,10 +124,12 @@
 .header-post {
 	color: #555;
 	padding: 20px 0px 20px 0px;
-	border-bottom: 1px #ededed solid;
 }
 .header-post h1 {
 	margin-bottom: 10px;
+}
+.header-post .post-btn .btn {
+	margin-left: 5px;
 }
 .idr {
 	position: relative;
@@ -189,26 +187,24 @@
 	width: 100%;
 	margin-top: 10px;
 	color: #555;
-	border-bottom: 1px #ededed solid;
 }
 .description-post .main {
 	position: relative;
-	width: 55%;
-	padding-right: 5%;
-	display: inline-block;
-	vertical-align: top;
+	width: 100%;
 }
 .description-post .side {
 	position: relative;
-	width: 38%;
-	display: inline-block;
-	vertical-align: top;
+	width: 100%;
 }
 .description-post .content {
 	position: relative;
 	width: 100%;
 	line-height: 1.5;
 	margin-bottom: 30px;
+	display: none;
+}
+.description-post .content-show {
+	display: block;
 }
 .description-post .content h2 {
 	margin-top: 20px;
@@ -274,7 +270,6 @@
 	position: relative;
 	width: 100%;
 	padding-bottom: 30px;
-	border-bottom: 1px #ededed solid;
 }
 .give-ratting .give-review {
 	position: relative;
@@ -335,11 +330,13 @@
 
 .view-post {
 	position: relative;
-	width: 1200px;
+	width: 1250px;
 	padding: 25px;
-	margin-top: 80px;
+	margin-top: 90px;
 	margin-bottom: 0px;
 	background-color: #fff;
+	display: grid;
+	grid-template-columns: 50% 1fr;
 }
 
 .product-panel {
@@ -347,12 +344,12 @@
 	top: 61px;
 	width: 100%;
 	height: 40px;
-	padding: 10px 0px;
+	padding: 15px 0px;
 	z-index: 10;
 	background-color: rgba(255,255,255,0.9);
 }
 .product-panel .main {
-	width: 92%;
+	width: 1300px;
 	margin: auto;
 }
 .product-panel .main .post-idr {
@@ -364,6 +361,33 @@
 }
 .product-panel .main .post-btn .btn {
 	margin-left: 5px;
+}
+
+.desc-panel {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background-color: #f0f0f0;
+	border: 2px #f0f0f0 solid;
+	border-radius: 4px;
+}
+.desc-panel ul li {
+	position: relative;
+	width: 25%;
+	line-height: 50px;
+	text-align: center;
+	float: left;
+	list-style: none;
+	font-size: 14px;
+	cursor: pointer;
+	color: #999;
+}
+.desc-panel ul li:hover {
+	color: #555;
+}
+.desc-panel ul li.desc-panel-select {
+	background-color: #fff;
+	color: #555;
 }
 
 @media only screen and (max-width: 768px) {
@@ -385,7 +409,8 @@
 		display: none;
 	}
 	.content-post {
-		height: auto;
+		width: 100%;
+		margin-bottom: 15px;
 	}
 	.content-post .main-post {
 		width: 100%;
@@ -403,18 +428,6 @@
 	.comment-content {
 		height: auto;
 	}
-	.other-picts {
-		height: 200px;
-		overflow-y: hidden;
-		overflow-x: auto;
-		white-space: nowrap;
-	}
-	.other-picts .view-picts {
-		width: 200px;
-		padding-bottom: 180px;
-		float: none;
-		display: inline-block;
-	}
 	.description-post {
 		border-bottom: 0px #ededed solid;
 	}
@@ -425,12 +438,10 @@
 		width: 100%;
 		padding-right: 0%;
 		display: block;
-		border-bottom: 1px #ededed solid;
 	}
 	.description-post .side {
 		width: 100%;
 		display: block;
-		border-bottom: 1px #ededed solid;
 	}
 	.description-post .content ul {
 		left: 0;
@@ -443,5 +454,6 @@
 		position: relative;
 		width: 95%;
 		padding: 2.5%;
+		grid-template-columns: 100%;
 	}
 }

@@ -118,14 +118,18 @@
 						<div class="panel-block-search">
 						    <li>
 						    	<div class="head-top panel-search">
-						    		<input type="text" name="txt-search" class="main-text" placeholder="Search">
-						    		<dib type="button" name="btn-search" class="btn-search fa fa-lg fa-search"></dib>
+						    		<form action="{{ url('/search') }}" method="get">
+						    			<input type="text" name="q" class="main-text" placeholder="Search" required="true">
+							    		<button type="submit" class="btn-search fa fa-lg fa-search"></button>
+						    		</form>
 						    	</div>
 						    </li>
 						    <div class="menu-user">
 
 							    <div class="icon-top btn-white-color" onclick="openCart()" id="menu-cart">
-							    	<div class="fa fa-lg fa-shopping-cart"></div>
+							    	<a href="{{ url('/cart') }}">
+							    		<div class="icn fa fa-lg fa-shopping-cart"></div>
+							    	</a>
 							    	@include('main.cart')
 							    </div>
 
@@ -148,7 +152,9 @@
 						    		CATEGORIES
 						    		<label class="fa fa-lg fa-caret-down"></label>
 						    	</div>
-						    	<div class="menu-category" id="menu-category"></div>
+						    	<div class="menu-category" id="menu-category">
+						    		@include('main.category')
+						    	</div>
 							</li>
 						</div>
 						

@@ -10,14 +10,6 @@
 	<div class="cen">
 		<div class="mid">
 			<div class="desc">
-				<div class="rated">
-					<label class="st fa fa-lg fa-star"></label>
-					<label class="st fa fa-lg fa-star"></label>
-					<label class="st fa fa-lg fa-star"></label>
-					<label class="st fa fa-lg fa-star-o"></label>
-					<label class="st fa fa-lg fa-star-o"></label>
-					<label class="review">123 reviews</label>
-				</div>
 				<div class="des">this is descriptions. this is descriptions.</div>
 				<div class="des-idr">
 					<label class="idr">IDR 250,000</label>

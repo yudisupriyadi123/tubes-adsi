@@ -19,6 +19,20 @@
 			}
 			return false;
 		});
+
+		$('#desc-panel ul li').on('click', function(event) {
+			event.preventDefault();
+			$('#desc-panel ul li').each(function(index, el) {
+				$(this).removeClass('desc-panel-select');
+			});
+			$(this).addClass('desc-panel-select');
+			var target = $(this).attr('key');
+
+			$('.description-post .main .content').each(function(index, el) {
+				$(this).removeClass('content-show');
+			});
+			$('#'+target).addClass('content-show');
+		});
 	});
 </script>
 <div class="product-panel">
@@ -40,6 +54,7 @@
 	</div>
 </div>
 <div class="view-post main-width">
+
 	<div class="content-post">
 		<div class="main-post" style="background-image: url('{{ url('/') }}/img/banner1.jpg');"></div>
 		<div class="side-post">
@@ -58,40 +73,58 @@
 
 	<div class="description-post">
 		<div class="main">
-			<div class="header-post">
-				<h1>This is Just for a Test</h1>
-				<div class="post-bot">
-					<div class="ratting">
-						<label class="fa fa-lg fa-star"></label>
-						<label class="fa fa-lg fa-star"></label>
-						<label class="fa fa-lg fa-star"></label>
-						<label class="fa fa-lg fa-star-o"></label>
-						<label class="fa fa-lg fa-star-o"></label>
-						<label class="review">123 reviews</label>
+
+			<div class="desc-panel" id="desc-panel">
+				<ul>
+					<li class="desc-panel-select" key="info">Product</li>
+				    <li key="desc">Descriptions</li>
+				    <li key="other">Others</li>
+				    <li key="feed-back">Feed Back</li>
+				</ul>
+			</div>
+
+			<div class="content content-show" id="info">
+				<div class="header-post">
+					<h1>This is Just for a Test</h1>
+					<div class="post-bot">
+						<!--
+						<div class="locate">
+							<label class="fa fa-lg fa-map-marker"></label>
+							<label class="val">Jl. Maribaya Kec. Lembang Kab. Bandung Barat 39401</label>
+						</div>
+					-->
+						<div class="locate">
+							<label class="fa fa-lg fa-user"></label>
+							<label class="val">Wisata Kampung</label>
+						</div>
+						<div class="locate">
+							<label class="fa fa-lg fa-clock-o"></label>
+							<label class="val">Published on 01/02/2018 12:00:00 PM</label>
+						</div>
 					</div>
-					<div class="locate">
-						<label class="fa fa-lg fa-map-marker"></label>
-						<label class="val">Jl. Maribaya Kec. Lembang Kab. Bandung Barat 39401</label>
+					<div class="idr">
+						<div class="ttl">IDR: 587,000</div>
+						<div class="ttl2">IDR: 687,000</div>
 					</div>
-					<div class="locate">
-						<label class="fa fa-lg fa-user"></label>
-						<label class="val">Wisata Kampung</label>
+					<div class="border-bottom"></div>
+					<div class="post-btn">
+						<button class="btn btn-main-color">
+							<label class="fa fa-lg fa-shopping-cart"></label>
+							<label>Add to Cart</label>
+						</button>
+						<button class="btn btn-sekunder-color">
+							<label class="fa fa-lg fa-money"></label>
+							<label>Order Now</label>
+						</button>
 					</div>
-					<div class="locate">
-						<label class="fa fa-lg fa-clock-o"></label>
-						<label class="val">Published on 01/02/2018 12:00:00 PM</label>
-					</div>
-				</div>
-				<div class="idr">
-					<div class="ttl">IDR: 587,000</div>
-					<div class="ttl2">IDR: 687,000</div>
 				</div>
 			</div>
-			<div class="content">
+
+			<div class="content" id="desc">
 				<h2>Descriptions</h2>
 				<p>Method Lock()digunakan untuk menandai bahwa semua operasi pada baris setelah kode tersebut adalah bersifat eksklusif. Hanya ada satu buah goroutine yang bisa melakukannya dalam satu waktu. Jika ada banyak goroutine yang eksekusinya bersamaan, harus antri. Pada kode di atas terdapat kode untuk increment nilai meter.val. Maka property tersebut hanya bisa diakses oleh satu goroutine saja. Method Unlock() akan membuka kembali akses operasi ke property/variabel yang di lock. Bisa dibilang, proses mutual exclusion terjadi diantara kedua method tersebut, Unlock() Lock() dan. Tak hanya ketika pengubahan nilai, pada saat pengaksesan juga perlu ditambahkan kedua fungsi ini, agar data yang diambil benar-benar data pada waktu itu.</p>
 			</div>
-			<div class="content">
+			<div class="content" id="other">
 				<h2>Others</h2>
 				<ul>
 				    <li>
@@ -128,74 +161,17 @@
 				    </li>
 				</ul>
 			</div>
-			<div class="content">
+			<!--
+			<div class="content" id="location">
 				<h2>Location</h2>
 				<div class="location fa fa-lg fa-map-marker"></div>
 			</div>
-		</div>
-		<div class="side">
-			<div class="content" id="ctn-review">
-				<h2>All Reviews</h2>
-				<div class="give-ratting">
-					<div class="give-review">
-						<label class="title">3.0</label>
-						<label class="icn fa fa-lg fa-star"></label>
-						<label class="icn fa fa-lg fa-star"></label>
-						<label class="icn fa fa-lg fa-star"></label>
-						<label class="icn fa fa-lg fa-star-o"></label>
-						<label class="icn fa fa-lg fa-star-o"></label>
-						<label class="ttl">123 reviews</label>
-					</div>
-					<ul>
-						<li>
-							<div class="title">Excellent</div>
-							<div class="row-select"><label class="row-length" style="width: 50%;"></label></div>
-							<div class="ttl">50%</div>
-						</li>
-					    <li>
-					    	<div class="title">Very Good</div>
-					    	<div class="row-select"><label class="row-length" style="width: 30%;"></label></div>
-					    	<div class="ttl">30%</div>
-					    </li>
-					    <li>
-					    	<div class="title">Average</div>
-					    	<div class="row-select"><label class="row-length" style="width: 10%;"></label></div>
-					    	<div class="ttl">10%</div>
-					    </li>
-					    <li>
-					    	<div class="title">Poork</div>
-					    	<div class="row-select"><label class="row-length" style="width: 7%;"></label></div>
-					    	<div class="ttl">7%</div>
-					    </li>
-					    <li>
-					    	<div class="title">Terrible</div>
-					    	<div class="row-select"><label class="row-length" style="width: 3%;"></label></div>
-					    	<div class="ttl">3%</div>
-					    </li>
-					</ul>
-				</div>
-				<!--
-				<div class="tool">
-					<ul>
-					    <li>
-					    	<div class="fa fa-lg fa-heart-o"></div>
-					    </li>
-					    <li>
-					    	<div class="fa fa-lg fa-comment-o"></div>
-					    </li>
-					    <li>
-					    	<div class="fa fa-lg fa-share-alt"></div>
-					    </li>
-					    <li class="main-tool">
-					    	<div class="fa fa-lg fa-shopping-cart"></div>
-					    </li>
-					</ul>
-				</div>
-				-->
+			-->
+			<div class="content" id="feed-back">
 				<div class="border-bottom"></div>
 				<form>
 					<!--<textarea name="comment" class="textarea" placeholder="Write Comment ..." required></textarea>-->
-					<input type="text" name="comment" class="txt txt-big-padding" placeholder="Write Comment ..." required>
+					<input type="text" name="comment" class="txt txt-big-padding" placeholder="Write Feed Back ..." required>
 				</form>
 				<div class="comment-content">
 					<div class="frame-comment comment-guess">
@@ -261,6 +237,9 @@
 
 				</div>
 			</div>
+		</div>
+		<div class="side">
+			
 		</div>
 	</div>
 </div>

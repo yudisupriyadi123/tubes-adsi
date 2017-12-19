@@ -18,7 +18,7 @@
 }
 .place-panel {
 	position: relative;
-	width: 1330px;
+	width: 1300px;
 	margin: auto;
 }
 .place-panel .panel-block-logo {
@@ -46,12 +46,11 @@
 .place-panel ul li {
 	list-style: none;
 }
-.place-panel ul li.main-menu {
+.place-panel ul .main-menu {
 	position: relative;
 	float: left;
 	font-size: 14px;
 	height: 60px;
-	line-height: 65px;
 	color: #999;
 	font-weight: 500;
 }
@@ -59,6 +58,7 @@
 	padding: 0px 10px;
 	cursor: pointer;
 	font-weight: 900;
+	line-height: 60px;
 }
 .place-panel ul li .text-panel .fa {
 	position: relative;
@@ -87,6 +87,7 @@
 	width: 80%;
 	background-color: #fff;
 	border-radius: 0;
+	box-shadow: 0 0 0;
 }
 .place-panel .panel-block-search .panel-search .btn-search {
 	position: relative;
@@ -222,13 +223,13 @@
 		height: 30px;
 		line-height: 30px;
 	}
-	.menu-mobile li.main-menu {
+	.menu-mobile .main-menu {
 		float: none;
 		width: 100%;
 		margin-bottom: 0px;
 		border-bottom: 1px #ededed solid;
 	}
-	.menu-mobile li.main-menu .text-panel {
+	.menu-mobile .main-menu .text-panel {
 		padding: 0;
 	}
 	.menu-mobile .top-menu-mobile {

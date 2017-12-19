@@ -15,17 +15,34 @@ class MainController extends Controller
     {
     	return view('/shops/index',['title' => 'All Products']);
     }
+    function recent()
+    {
+        return view('/shops/index',['title' => 'Recently Posts']);
+    }
     function top()
     {
-    	return view('/shops/index',['title' => 'Top Rated']);
+    	return view('/shops/index',['title' => 'Popular Posts']);
     }
     function popular()
     {
-    	return view('/shops/index',['title' => 'Popular']);
+    	return view('/shops/index',['title' => 'Most Viewed']);
+    }
+    function search()
+    {
+        $ctr = $_GET['q'];
+        return view('/search/index',['title' => $ctr]);
     }
     function product($id)
     {
         return view('/product/index',['title' => 'Product '.$id]);
+    }
+    function category($ctr)
+    {
+        return view('/category/index',['title' => 'Category '.$ctr]);
+    }
+    function tags($ctr)
+    {
+        return view('/tags/index',['title' => 'Tag '.$ctr]);
     }
     function orderCek()
     {

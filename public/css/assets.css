@@ -2,7 +2,7 @@
 	padding: 0;
 	border: 0;
 	margin: 0;
-	font-family: sans-serif, arial;
+	font-family: arial, sans-serif;
 }
 
 html {
@@ -33,7 +33,7 @@ a {
 }
 
 .main-width {
-	width: 1250px;
+	width: 1300px;
 	margin: 0 auto;
 }
 
@@ -82,9 +82,6 @@ a {
 }
 .txt-big-padding {
 	padding: 15px 2.5%;
-}
-.txt:focus {
-	background-color: rgba(0,0,0,0.1);
 }
 
 .btn {

@@ -19,6 +19,14 @@
 					<input type="text" name="name" class="txt" placeholder="" required="true">
 				</div>
 				<div class="block">
+					<div class="icn">Email</div>
+					<input type="text" name="email" class="txt" placeholder="" required="true">
+				</div>
+				<div class="block">
+					<div class="icn">Phone Number</div>
+					<input type="text" name="phone" class="txt" placeholder="" required="true">
+				</div>
+				<div class="block">
 					<div class="icn">Cost Transfer</div>
 					<input type="text" name="name" class="txt" placeholder="Ex: 150000" required="true">
 				</div>

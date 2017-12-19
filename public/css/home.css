@@ -52,17 +52,21 @@
 
 .home-articles {
 	position: relative;
-	padding-bottom: 34%;
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+	margin-bottom: 30px;
 }
 .home-articles .left {
 	position: relative;
-	width: 50%;
+	width: 70%;
+	height: 300px;
 	float: left;
 	background-color: #f0f0f0;
 }
 .home-articles .right {
 	position: relative;
-	width: 50%;
+	width: 30%;
 	float: right;
 	background-color: #e1e1e1;
 }
@@ -86,13 +90,13 @@
 .home-articles .left .frame-articles {
 	position: relative;
 	width: 100%;
-	padding-bottom: 66.66%;
+	padding-bottom: 300px;
 	background-color: #000;
 }
 .home-articles .right .frame-articles {
 	position: relative;
-	width: 50%;
-	padding-bottom: 33.33%;
+	width: 100%;
+	padding-bottom: 150px;
 	float: left;
 	background-color: #000;
 }
@@ -116,7 +120,7 @@
 	height: auto;
 	background-color: #fff;
 	overflow: hidden;
-	border-radius: 5px;
+	border-radius: 0px;
 	border: 1px #e1e1e1 solid;
 }
 .frame-products:hover {
@@ -318,8 +322,11 @@
 }
 
 @media only screen and (max-width: 768px) {
+	.frame-articles {
+		background-size: 100%;
+	}
 	.home-articles {
-		padding-bottom: 250px;
+		height: 450px;
 	}
 	.home-articles .left {
 		float: none;
@@ -329,11 +336,8 @@
 		float: none;
 		width: 100%;
 	}
-	.home-articles .left .frame-articles {
-		padding-bottom: 250px;
-	}
 	.home-articles .right .frame-articles {
-		padding-bottom: 125px;
+		width: 50%;
 	}
 	.scroll-left {
 		white-space: nowrap;

@@ -1,36 +1,51 @@
-<div class="frame-popup" id="ctr">
-	<div class="main-popup ctr" id="collect">
-		<div id="menu-explore">
-			<a href="{{ url('shops') }}">
-				<div class="frame-explore">
-					<label class="fa fa-lg fa-shopping-bag"></label>
-					<label class="ctr-text">All Products</label>
-				</div>
-			</a>
-			<a href="{{ url('post/recent') }}">
-				<div class="frame-explore">
-					<label class="fa fa-lg fa-fire"></label>
-					<label class="ctr-text">Recently Posts</label>
-				</div>
-			</a>
-			<a href="{{ url('hot') }}">
-				<div class="frame-explore">
-					<label class="fa fa-lg fa-flash"></label>
-					<label class="ctr-text">Hot</label>
-				</div>
-			</a>
-			<a href="{{ url('tranding') }}">
-				<div class="frame-explore">
-					<label class="fa fa-lg fa-line-chart"></label>
-					<label class="ctr-text">Tranding</label>
-				</div>
-			</a>
-			<a href="{{ url('fresh') }}">
-				<div class="frame-explore">
-					<label class="fa fa-lg fa-clock-o"></label>
-					<label class="ctr-text">Fresh</label>
-				</div>
-			</a>
-	    </div>
-	</div>
+<div class="menu-main-ctr">
+	<div class="ctr-head">Top Chooices</div>
+	<ol>
+	    <a href="{{ url('/recent') }}">
+	    	<li>
+	    		<label class="icn fa fa-lg fa-clock-o"></label>
+	    		<label class="ttl">Recently Posts</label>
+	    	</li>
+	    </a>
+	    <a href="{{ url('/popular') }}">
+	    	<li>
+	    		<label class="icn fa fa-lg fa-line-chart"></label>
+	    		<label class="ttl">Popular Posts</label>
+	    	</li>
+	    </a>
+	    <a href="{{ url('/top') }}">
+	    	<li>
+	    		<label class="icn fa fa-lg fa-fire"></label>
+	    		<label class="ttl">Most Viewed</label>
+	    	</li>
+	    </a>
+	    <a href="{{ url('/shops') }}">
+	    	<li>
+	    		<label class="icn fa fa-lg fa-shopping-bag"></label>
+	    		<label class="ttl">All Products</label>
+	    	</li>
+	    </a>
+	</ol>
+	<div class="ctr-head">All Categories</div>
+	<ol>
+		@for ($i=1; $i <= 15; $i++)
+	    <a href="{{ url('/category/ctr'.$i) }}">
+	    	<li>
+	    		<label class="icn fa fa-lg fa-shopping-bag"></label>
+	    		<label class="ttl">category {{ $i }}</label>
+	    	</li>
+	    </a>
+	    @endfor
+	</ol>
+	<div class="ctr-head">Tranding Nows</div>
+	<ol>
+		@for ($i=1; $i <= 5; $i++)
+	    <a href="{{ url('/tags/ctr'.$i) }}">
+	    	<li>
+	    		<label class="icn fa fa-lg fa-star"></label>
+	    		<label class="ttl">Tags {{ $i }}</label>
+	    	</li>
+	    </a>
+	    @endfor
+	</ol>
 </div>
