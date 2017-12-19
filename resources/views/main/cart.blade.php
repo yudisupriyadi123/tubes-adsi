@@ -1,4 +1,4 @@
-<div class="frame-popup" id="cart">
+<div id="cart">
 	<div class="main-popup cart">
 		<div class="main">
 			<!--empty cart-->

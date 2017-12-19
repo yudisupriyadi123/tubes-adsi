@@ -1,0 +1,28 @@
+.main-home {
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.main-home .main {
+	position: relative;
+	width: 98%;
+	height: 100%;
+	margin: auto;
+	background-color: #fff;
+}
+.main-home .left {
+	position: relative;
+	width: 30%;
+	height: 500px;
+	display: inline-block;
+	vertical-align: top;
+}
+.main-home .right {
+	position: relative;
+	width: 68%;
+	height: 800px;
+	display: inline-block;
+	vertical-align: top;
+}

@@ -32,7 +32,7 @@
 .place-panel .panel-block-search {
 	position: relative;
 	float: right;
-	top: 10px;
+	top: 0px;
 	right: 0px;
 	width: 70%;
 
@@ -51,7 +51,7 @@
 	float: left;
 	font-size: 14px;
 	height: 60px;
-	line-height: 60px;
+	line-height: 65px;
 	color: #999;
 	font-weight: 500;
 }
@@ -67,7 +67,7 @@
 	top: -2.5px;
 }
 .place-panel ul li:hover {
-	color: #555;
+	color: #CA4F4F;
 }
 .place-panel .panel-block-search .btn-circle, .btn-head {
 	float: left;
@@ -76,15 +76,15 @@
 .place-panel .panel-block-search .panel-search {
 	position: relative;
 	float: left;
-	top: 2px;
-	width: 60%;
+	margin-top: 2px;
+	width: 65%;
 	border-radius: 3px;
 	overflow: hidden;
 	background-color: #fff;
 	border: 1px rgba(0,0,0,0.1) solid;
 }
 .place-panel .panel-block-search .panel-search .main-text {
-	width: 82%;
+	width: 80%;
 	background-color: #fff;
 	border-radius: 0;
 }
@@ -96,6 +96,7 @@
 	line-height: 35px;
 	text-align: center;
 	cursor: pointer;
+	background-color: #f0f0f0;
 	color: #999;
 	font-size: 16px;
 }
@@ -106,6 +107,22 @@
 .place-panel .panel-block-search .menu-user {
 	float: right;
 	right: 0;
+}
+.place-panel .panel-block-search .menu-user .icon-top {
+	position: relative;
+	width: 40px;
+	height: 60px;
+	line-height: 60px;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	font-size: 20px;
+}
+.place-panel .panel-block-search .menu-user .icon-top:hover {
+	color: #CA4F4F;
+}
+.place-panel .panel-block-search .head-top {
+	top: 12px;
 }
 
 .place-panel ul li .panel-logo {
@@ -222,5 +239,15 @@
 	}
 	.nav-mobile {
 		display: block;
+	}
+	.place-panel .panel-block-search .menu-user .icon-top {
+		top: 30px;
+		float: none;
+		width: 100%;
+		height: 40px;
+		line-height: 40px;
+		border-radius: 3px;
+		border: 1px #ededed solid;
+		margin-bottom: 15px;
 	}
 }

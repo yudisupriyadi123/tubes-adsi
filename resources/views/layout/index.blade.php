@@ -18,6 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('/css/cart.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('/css/product.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('/css/sign.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('/css/main-home.css') }}">
 
 	<script type="text/javascript" src="{{ asset('/js/jquery.js') }}"></script>
 
@@ -116,25 +117,25 @@
 						</div>
 						<div class="panel-block-search">
 						    <li>
-						    	<div class="panel-search">
+						    	<div class="head-top panel-search">
 						    		<input type="text" name="txt-search" class="main-text" placeholder="Search">
 						    		<dib type="button" name="btn-search" class="btn-search fa fa-lg fa-search"></dib>
 						    	</div>
 						    </li>
 						    <div class="menu-user">
-							    <button class="btn-circle btn-active-3 btn-white-color" onclick="openCtr()" id="menu-cart">
-							    	<div class="fa fa-lg fa-th"></div>
-							    </button>
-							    <button class="btn-circle btn-active-3 btn-white-color" onclick="openCart()" id="menu-cart">
+
+							    <div class="icon-top btn-white-color" onclick="openCart()" id="menu-cart">
 							    	<div class="fa fa-lg fa-shopping-cart"></div>
-							    </button>
+							    	@include('main.cart')
+							    </div>
+
 							    <a href="{{ url('/signup') }}">
-								    <button class="btn-head btn btn-active-3 btn-white-color-red">
+								    <button class="head-top btn-head btn btn-active-3 btn-white-color-red">
 								    	<label>Signup</label>
 								    </button>
 								</a>
 							    <a href="{{ url('/signin') }}">
-								    <button class="btn-head btn btn-main-color">
+								    <button class="head-top btn-head btn btn-main-color">
 								    	<label>Login</label>
 								    </button>
 								</a>
@@ -144,42 +145,10 @@
 					    <div class="panel-block-menu">
 						    <li class="main-menu border-top-hidden" id="category">
 						    	<div class="text-panel">
-						    		EXPLORE
+						    		CATEGORIES
 						    		<label class="fa fa-lg fa-caret-down"></label>
 						    	</div>
-						    
-							    <div id="menu-explore">
-							    	<a href="{{ url('shops') }}">
-										<div class="frame-explore">
-											<label class="fa fa-lg fa-shopping-bag"></label>
-											<label class="ctr-text">All Products</label>
-										</div>
-									</a>
-							    	<a href="{{ url('post/recent') }}">
-							    		<div class="frame-explore">
-							    			<label class="fa fa-lg fa-fire"></label>
-							    			<label class="ctr-text">Recently Posts</label>
-							    		</div>
-							    	</a>
-									<a href="{{ url('hot') }}">
-										<div class="frame-explore">
-											<label class="fa fa-lg fa-flash"></label>
-											<label class="ctr-text">Hot</label>
-										</div>
-									</a>
-									<a href="{{ url('tranding') }}">
-										<div class="frame-explore">
-											<label class="fa fa-lg fa-line-chart"></label>
-											<label class="ctr-text">Tranding</label>
-										</div>
-									</a>
-									<a href="{{ url('fresh') }}">
-										<div class="frame-explore">
-											<label class="fa fa-lg fa-clock-o"></label>
-											<label class="ctr-text">Fresh</label>
-										</div>
-									</a>
-							    </div>
+						    	<div class="menu-category" id="menu-category"></div>
 							</li>
 						</div>
 						
@@ -193,8 +162,7 @@
 	@yield("content")
 </div>
 <div class="fa fa-lg fa-chevron-up to-top"></div>
-@include('main.cart')
-@include('main.category')
+
 <div id="footer">
 	<div class="frame-footer">
 		<div class="pad footer-lef">

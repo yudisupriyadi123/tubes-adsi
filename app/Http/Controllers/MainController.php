@@ -9,7 +9,7 @@ class MainController extends Controller
     //
     function index()
     {
-    	return view('/home/index',['title' => 'Home']);
+    	return view('/home/home',['title' => 'Home']);
     }
     function shops()
     {

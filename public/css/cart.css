@@ -10,9 +10,12 @@
 	z-index: 100;
 	display: none;
 }
+.main-popup#collect {
+	width: 300px;
+}
 .main-popup {
 	position: fixed;
-	top: 60px;
+	top: 55px;
 	right: 5%;
 	width: 400px;
 	background-color: #fff;
@@ -61,19 +64,35 @@
 	text-align: center;
 }
 
-#category:hover > #menu-explore {
+#menu-cart:hover > #cart {
 	display: block;
 }
-#menu-explore {
-	position: fixed;
-	top: 60px;
-	width: 260px;
-	padding: 0px 20px 30px 20px;
-	background-color: #fff;
-	z-index: 100;
-	overflow-y: auto;
-	box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+
+#cart {
 	display: none;
+}
+
+#category:hover > #menu-category {
+	display: block;
+}
+#menu-category {
+	position: fixed;
+	top: 55px;
+	width: 800px;
+	height: 500px;
+	background-color: #fff;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+	z-index: 110;
+	border-radius: 3px;
+	display: none;
+}
+
+#menu-explore {
+	position: relative;
+	top: 0px;
+	width: 90%;
+	padding: 20px 5% 10px 5%;
+	background-color: #fff;
 }
 #menu-explore .frame-explore {
 	position: relative;
