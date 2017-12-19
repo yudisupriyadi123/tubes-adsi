@@ -394,7 +394,7 @@
 .need-p clr {
 	color: #CA4F4F;
 }
-.stock .main {
+.stock .place-stock {
 	position: relative;
 	margin-top: 5px;
 	width: 200px;
@@ -405,10 +405,10 @@
 	overflow: hidden;
 	border-radius: 3px;
 }
-.stock .main .op {
+.stock .place-stock .op {
 	float: left;
 }
-.stock .main .btn {
+.stock .place-stock .btn-qty {
 	width: 100%;
 	height: 35px;
 	padding: 0;
@@ -417,11 +417,11 @@
 	background-color: #fff;
 	color: #999;
 }
-.stock .main .btn:hover {
+.stock .place-stock .btn:hover {
 	background-color: #f0f0f0;
 	color: #CA4F4F;
 }
-.stock .main .txt {
+.stock .place-stock .txt {
 	width: 94%;
 	border-radius: 0;
 	text-align: center;
@@ -530,5 +530,6 @@
 		width: 95%;
 		padding: 2.5%;
 		grid-template-columns: 100%;
+		border: 0;
 	}
 }

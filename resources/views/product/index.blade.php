@@ -122,7 +122,7 @@
 					</div>
 					<div class="size need-p">
 						<p><b>Availble size on</b></p>
-						<p>You can spesificed it letter</p>
+						<p>You can specificed it letter</p>
 						<button class="btn">S</button>
 						<button class="btn">M</button>
 						<button class="btn">L</button>
@@ -140,12 +140,12 @@
 					<div class="stock need-p">
 						<p><b>Available <clr> on > 9 Stock </clr> Products</b></p>
 						<p>Put count of product that you want</p>
-						<div class="main">
-							<button class="op btn" id="qty-min">
+						<div class="place-stock">
+							<button class="op btn-qty" id="qty-min">
 								<label class="fa fa-lg fa-minus"></label>
 							</button>
 							<input type="text" name="qty" class="op txt" placeholder="qty" value="1" id="qty" disabled="true">
-							<button class="op btn" id="qty-plus">
+							<button class="op btn-qty" id="qty-plus">
 								<label class="fa fa-lg fa-plus"></label>
 							</button>
 						</div>
@@ -166,9 +166,11 @@
 			<div class="content" id="desc">
 				<h2>Descriptions</h2>
 				<p>Method Lock()digunakan untuk menandai bahwa semua operasi pada baris setelah kode tersebut adalah bersifat eksklusif. Hanya ada satu buah goroutine yang bisa melakukannya dalam satu waktu. Jika ada banyak goroutine yang eksekusinya bersamaan, harus antri. Pada kode di atas terdapat kode untuk increment nilai meter.val. Maka property tersebut hanya bisa diakses oleh satu goroutine saja. Method Unlock() akan membuka kembali akses operasi ke property/variabel yang di lock. Bisa dibilang, proses mutual exclusion terjadi diantara kedua method tersebut, Unlock() Lock() dan. Tak hanya ketika pengubahan nilai, pada saat pengaksesan juga perlu ditambahkan kedua fungsi ini, agar data yang diambil benar-benar data pada waktu itu.</p>
+				<h2>Notes</h2>
+				<p>Method Lock()digunakan untuk menandai bahwa semua operasi pada baris setelah kode tersebut adalah bersifat eksklusif. Hanya ada satu buah goroutine yang bisa melakukannya dalam satu waktu. Jika ada banyak goroutine yang eksekusinya bersamaan, harus antri. Pada kode di atas terdapat kode untuk increment nilai meter.val. Maka property tersebut hanya bisa diakses oleh satu goroutine saja.</p>
 			</div>
 			<div class="content" id="other">
-				<h2>Others</h2>
+				<h2>Details Product</h2>
 				<ul>
 				    <li>
 				    	<label class="fa fa-lg fa-circle"></label>
@@ -186,6 +188,28 @@
 				    	<label class="fa fa-lg fa-circle"></label>
 				    	This is just for a Test.
 				    </li>
+				</ul>
+				<h2>Details Product</h2>
+				<ul>
+				    <li>
+				    	<label class="fa fa-lg fa-circle"></label>
+				    	This is just for a Test.
+				    </li>
+				    <li>
+				    	<label class="fa fa-lg fa-circle"></label>
+				    	This is just for a Test.
+				    </li>
+				    <li>
+				    	<label class="fa fa-lg fa-circle"></label>
+				    	This is just for a Test.
+				    </li>
+				    <li>
+				    	<label class="fa fa-lg fa-circle"></label>
+				    	This is just for a Test.
+				    </li>
+				</ul>
+				<h2>Details Product</h2>
+				<ul>
 				    <li>
 				    	<label class="fa fa-lg fa-circle"></label>
 				    	This is just for a Test.
