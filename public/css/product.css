@@ -126,7 +126,9 @@
 	padding: 20px 0px;
 }
 .header-post .post-btn .btn {
-	margin-right: 5px;
+	width: 100%;
+	padding: 15px 0px;
+	margin-bottom: 15px;
 }
 .idr .ttl {
 	font-size: 25px;
@@ -385,7 +387,8 @@
 }
 
 .stock {
-	padding: 20px 0px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 .need-p p {
 	font-size: 14px;
@@ -431,7 +434,7 @@
 }
 
 .size {
-	margin-top: 15px;
+	margin-top: 20px;
 }
 .size .btn {
 	border-radius: 0;
@@ -444,10 +447,15 @@
 	background-color: #f0f0f0;
 	color: #ca4f4f;
 }
-
+.color {
+	margin-top: 20px;
+}
 .color .btn {
 	width: 35px;
 	height: 35px;
+	border-radius: 0;
+	border: 1px #999 solid;
+	cursor: pointer;
 }
 .color .color-1 {
 	background-color: white;

@@ -129,7 +129,7 @@
 						<button class="btn">XL</button>
 						<button class="btn">XXL</button>
 					</div>
-					<div class="color size need-p">
+					<div class="color need-p">
 						<p><b>Availble color on</b></p>
 						<button class="btn btn-color color-1"></button>
 						<button class="btn btn-color color-2"></button>
