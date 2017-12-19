@@ -123,17 +123,10 @@
 /*start header post*/
 .header-post {
 	color: #555;
-	padding: 20px 0px 20px 0px;
-}
-.header-post h1 {
-	margin-bottom: 10px;
+	padding: 20px 0px;
 }
 .header-post .post-btn .btn {
-	margin-left: 5px;
-}
-.idr {
-	position: relative;
-	vertical-align: top;
+	margin-right: 5px;
 }
 .idr .ttl {
 	font-size: 25px;
@@ -144,7 +137,7 @@
 .idr .ttl2 {
 	font-size: 20px;
 	font-weight: normal;
-	color: #CA4F4F;
+	color: #555;
 	display: inline-block;
 	text-decoration: line-through;
 }
@@ -172,7 +165,7 @@
 	color: #555;
 }
 .post-bot .locate {
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	font-size: 14px;
 }
 .post-bot .post-tool {
@@ -337,6 +330,7 @@
 	background-color: #fff;
 	display: grid;
 	grid-template-columns: 50% 1fr;
+	border: 1px #ededed solid;
 }
 
 .product-panel {
@@ -388,6 +382,87 @@
 .desc-panel ul li.desc-panel-select {
 	background-color: #fff;
 	color: #555;
+}
+
+.stock {
+	padding: 20px 0px;
+}
+.need-p p {
+	font-size: 14px;
+	line-height: 1.5;
+}
+.need-p clr {
+	color: #CA4F4F;
+}
+.stock .main {
+	position: relative;
+	margin-top: 5px;
+	width: 200px;
+	height: 35px;
+	display: grid;
+	grid-template-columns: 30px 1fr 30px;
+	border: 1px #999 solid;
+	overflow: hidden;
+	border-radius: 3px;
+}
+.stock .main .op {
+	float: left;
+}
+.stock .main .btn {
+	width: 100%;
+	height: 35px;
+	padding: 0;
+	border-radius: 0;
+	font-size: 10px;
+	background-color: #fff;
+	color: #999;
+}
+.stock .main .btn:hover {
+	background-color: #f0f0f0;
+	color: #CA4F4F;
+}
+.stock .main .txt {
+	width: 94%;
+	border-radius: 0;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0 0 0 1px #999;
+	font-weight: 900;
+}
+
+.size {
+	margin-top: 15px;
+}
+.size .btn {
+	border-radius: 0;
+	background-color: #fff;
+	color: #555;
+	border: 1px #999 solid;
+	cursor: pointer;
+}
+.size .btn:hover {
+	background-color: #f0f0f0;
+	color: #ca4f4f;
+}
+
+.color .btn {
+	width: 35px;
+	height: 35px;
+}
+.color .color-1 {
+	background-color: white;
+}
+.color .color-2 {
+	background-color: black;
+}
+.color .color-3 {
+	background-color: grey;
+}
+.color .color-4 {
+	background-color: blue;
+}
+.color .color-5 {
+	background-color: red;
 }
 
 @media only screen and (max-width: 768px) {

@@ -33,6 +33,26 @@
 			});
 			$('#'+target).addClass('content-show');
 		});
+
+		var qty_cost_min = 1;
+		var qty_cost_max = 9;
+		$('#qty-min').on('click', function(event) {
+			var new_qty = (parseInt($('#qty').val()) - 1);
+			if (new_qty <= 1) {
+				$('#qty').val(qty_cost_min);
+			} else {
+				$('#qty').val(new_qty);
+			}
+		});
+		$('#qty-plus').on('click', function(event) {
+			var new_qty = (parseInt($('#qty').val()) + 1);
+			if (new_qty >= qty_cost_max) {
+				$('#qty').val(qty_cost_max);	
+			} else {
+				$('#qty').val(new_qty);
+			}
+			
+		});
 	});
 </script>
 <div class="product-panel">
@@ -78,7 +98,7 @@
 				<ul>
 					<li class="desc-panel-select" key="info">Product</li>
 				    <li key="desc">Descriptions</li>
-				    <li key="other">Others</li>
+				    <li key="other">Detail</li>
 				    <li key="feed-back">Feed Back</li>
 				</ul>
 			</div>
@@ -87,12 +107,6 @@
 				<div class="header-post">
 					<h1>This is Just for a Test</h1>
 					<div class="post-bot">
-						<!--
-						<div class="locate">
-							<label class="fa fa-lg fa-map-marker"></label>
-							<label class="val">Jl. Maribaya Kec. Lembang Kab. Bandung Barat 39401</label>
-						</div>
-					-->
 						<div class="locate">
 							<label class="fa fa-lg fa-user"></label>
 							<label class="val">Wisata Kampung</label>
@@ -106,7 +120,36 @@
 						<div class="ttl">IDR: 587,000</div>
 						<div class="ttl2">IDR: 687,000</div>
 					</div>
-					<div class="border-bottom"></div>
+					<div class="size need-p">
+						<p><b>Availble size on</b></p>
+						<p>You can spesificed it letter</p>
+						<button class="btn">S</button>
+						<button class="btn">M</button>
+						<button class="btn">L</button>
+						<button class="btn">XL</button>
+						<button class="btn">XXL</button>
+					</div>
+					<div class="color size need-p">
+						<p><b>Availble color on</b></p>
+						<button class="btn btn-color color-1"></button>
+						<button class="btn btn-color color-2"></button>
+						<button class="btn btn-color color-3"></button>
+						<button class="btn btn-color color-4"></button>
+						<button class="btn btn-color color-5"></button>
+					</div>
+					<div class="stock need-p">
+						<p><b>Available <clr> on > 9 Stock </clr> Products</b></p>
+						<p>Put count of product that you want</p>
+						<div class="main">
+							<button class="op btn" id="qty-min">
+								<label class="fa fa-lg fa-minus"></label>
+							</button>
+							<input type="text" name="qty" class="op txt" placeholder="qty" value="1" id="qty" disabled="true">
+							<button class="op btn" id="qty-plus">
+								<label class="fa fa-lg fa-plus"></label>
+							</button>
+						</div>
+					</div>
 					<div class="post-btn">
 						<button class="btn btn-main-color">
 							<label class="fa fa-lg fa-shopping-cart"></label>
