@@ -17,6 +17,7 @@ Route::get('/recent', 'MainController@recent');
 Route::get('/popular', 'MainController@popular');
 Route::get('/top', 'MainController@top');
 Route::get('/search', 'MainController@search');
+Route::get('/cart', 'MainController@cart');
 Route::get('/product/{id}', 'MainController@product');
 Route::get('/order/cek', 'MainController@orderCek');
 Route::get('/order/proof', 'MainController@orderProof');

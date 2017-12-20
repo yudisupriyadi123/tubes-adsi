@@ -9,7 +9,7 @@ class MainController extends Controller
     //
     function index()
     {
-    	return view('/home/home',['title' => 'Home']);
+    	return view('/home/index',['title' => 'Home']);
     }
     function shops()
     {
@@ -21,16 +21,17 @@ class MainController extends Controller
     }
     function top()
     {
-    	return view('/shops/index',['title' => 'Popular Posts']);
+    	return view('/shops/index',['title' => 'Most Viewed']);
     }
     function popular()
     {
-    	return view('/shops/index',['title' => 'Most Viewed']);
+    	return view('/shops/index',['title' => 'Popular Posts']);
     }
     function search()
     {
         $ctr = $_GET['q'];
-        return view('/search/index',['title' => $ctr]);
+        //return view('/search/index',['title' => $ctr]);
+        return view('/shops/index',['title' => $ctr]);
     }
     function product($id)
     {
@@ -38,11 +39,13 @@ class MainController extends Controller
     }
     function category($ctr)
     {
-        return view('/category/index',['title' => 'Category '.$ctr]);
+        //return view('/category/index',['title' => 'Category '.$ctr]);
+        return view('/shops/index',['title' => $ctr]);
     }
     function tags($ctr)
     {
-        return view('/tags/index',['title' => 'Tag '.$ctr]);
+        //return view('/tags/index',['title' => 'Tag '.$ctr]);
+        return view('/shops/index',['title' => $ctr]);
     }
     function orderCek()
     {
@@ -51,6 +54,10 @@ class MainController extends Controller
     function orderProof()
     {
         return view('/main/proof',['title' => 'Order Proof']);
+    }
+    function cart()
+    {
+        return view('/cart/index',['title' => 'Cart']);
     }
     function signin()
     {

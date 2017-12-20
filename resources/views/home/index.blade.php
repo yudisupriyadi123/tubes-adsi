@@ -15,15 +15,7 @@
 				</div>
 			</a>
 			<a href="{{ url('product/12045') }}">
-				<div class="frame-articles need-zoom" style="background-image: url('{{ url('/') }}/img/banner2.jpg');">
-				</div>
-			</a>
-			<a href="{{ url('product/12045') }}">
 				<div class="frame-articles need-zoom" style="background-image: url('{{ url('/') }}/img/banner1.jpg');">
-				</div>
-			</a>
-			<a href="{{ url('product/12045') }}">
-				<div class="frame-articles need-zoom" style="background-image: url('{{ url('/') }}/img/banner2.jpg');">
 				</div>
 			</a>
 		</div>
@@ -36,7 +28,7 @@
 		</div>
 		<div class="home-tags grid-3 scroll-left">
 				<?php for ($i = 0; $i < 9; $i++) { ?>
-				<a href="#">
+				<a href="{{ url('/tags/tag'.$i) }}">
 					<div class="frame-tags">
 				    	<div class="title">#this is a tags</div>
 				    	<div class="count">33333 Posts</div>
@@ -52,9 +44,11 @@
 		</div>
 		<div class="home-categories grid-7 scroll-left">
 			<?php for ($i = 0; $i < 7; $i++) { ?>
-			<div class="frame-ctr">
-				<div class="icon-ctr fa fa-lg fa-bars"></div>
-			</div>
+			<a href="{{ url('/category/ctr'.$i) }}">
+				<div class="frame-ctr">
+					<div class="icon-ctr fa fa-lg fa-bars"></div>
+				</div>
+			</a>
 			<?php } ?>
 		</div>
 	</div>
